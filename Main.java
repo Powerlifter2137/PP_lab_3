@@ -1,3 +1,4 @@
+import geometry.Point;
 public class Main {
   public static void main(String[] args) {
     Point newpoint = new Point(3, 5);
