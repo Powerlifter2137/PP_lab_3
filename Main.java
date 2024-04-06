@@ -1,12 +1,23 @@
 import geometry.*;
 public class Main {
   public static void main(String[] args) {
-      Point c = new Point(2, 3);
-      ColoredCircle circle2 = new ColoredCircle(c, 3.0, "red");
+      Circle[] circles = new Circle[3];
+        circles[0] = new Circle(new Point(2, 6), 2);
+        circles[1] = new Circle(new Point(1, 4), 1.0);
+        circles[2] = new Circle(new Point(-1, 4), 5.0);
 
-      System.out.println(circle2.getCenter().getX() + " " + circle2.getCenter().getY());
-      System.out.println(circle2.getRadius());
-      System.out.println(circle2.calculatePerimeter());
-      System.out.println(circle2.getColor());
+        ColoredCircle[] coloredCircles = new ColoredCircle[3];
+        coloredCircles[0] = new ColoredCircle(new Point(3, 7), 2.0, "red");
+        coloredCircles[1] = new ColoredCircle(new Point(0, 5), 1.5, "blue");
+        coloredCircles[2] = new ColoredCircle(new Point(-2, -1), 4, "green");
+
+        for (Circle circle : circles) {
+            System.out.println("pole: " + circle.calculateArea());
+        }
+
+        for (ColoredCircle coloredCircle : coloredCircles) {
+            System.out.println("pole: " + coloredCircle.calculateArea());
+            System.out.println("kolor: " + coloredCircle.getColor());
+        }
   }
 }
