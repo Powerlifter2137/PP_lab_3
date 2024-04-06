@@ -1,28 +1,11 @@
+import geometry.*;
 public class Main {
   public static void main(String[] args) {
-    Point newpoint = new Point(3, 5);
-    System.out.println(newpoint.getX());
-    System.out.println(newpoint.getY());
+      Point c = new Point(2, 3);
+      Circle circle1 = new Circle(c, 3.0);
+
+      System.out.println(circle1.getCenter().getX() + " " + circle1.getCenter().getY());
+      System.out.println(circle1.getRadius());
+      System.out.println(circle1.calculatePerimeter());
   }
 }
-class Point {
-  private double x,y;
-
-  public Point(double x2, double y2){
-    x = x2;
-    y = y2;
-  }
-
-  public double getX(){
-    return x;
-  }
-  public double getY(){
-    return y;
-  }
-  public void setX(double x3){
-    x = x3;
-  }
-  public void setY(double y3){
-    y = y3;
-  }
-} 
